@@ -57,11 +57,11 @@ document.getElementById("load").addEventListener("click", function () {
 });
 
 document.getElementById("play").addEventListener("click", function () {
-    var steps = parseInt(document.getElementById("steps").value);
-    var temp = parseInt(document.getElementById("temp").value);
-    playVAE(steps, temp);
+    rnnPlayer.start(sx);
 });
 
 document.getElementById("gen").addEventListener("click", function () {
-    rnnPlayer.start(sx);
+    var steps = parseInt(document.getElementById("steps").value);
+    var temp = parseInt(document.getElementById("temp").value);
+    playVAE(steps, temp);
 });
