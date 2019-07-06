@@ -29,7 +29,7 @@ function play(x, steps, temperature) {
     .then(function (sample) {
         viz(sample)
         sx = sample;
-        rnnPlayer.start(sample);
+        //rnnPlayer.start(sample);
     });
 }
 
@@ -60,4 +60,8 @@ document.getElementById("play").addEventListener("click", function () {
     var steps = parseInt(document.getElementById("steps").value);
     var temp = parseInt(document.getElementById("temp").value);
     playVAE(steps, temp);
+});
+
+document.getElementById("gen").addEventListener("click", function () {
+    rnnPlayer.start(sx);
 });
