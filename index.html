@@ -12,6 +12,46 @@
     <p>You need to wait a minute before you start.</p><br>
     Steps: <input type='number' value='100' id='steps'/><br>
     Variance: <input type='range' min='1' max='2' step='0.1' value='1.5' id='temp'/><br>
+    VAE Model: <select id='vae'>
+    
+    <option disabled>-Drums-</option>
+    <option value="drums_2bar_lokl_small">Small Two Bar with Low KL Divergence</option>
+    <option value="drums_2bar_hikl_small">Small Two Bar with High KL Divergence</option>
+    <option value="drums_2bar_nade_9_q2">Nine Class Two Bar with NADE Decoder</option>
+    <option value="drums_4bar_med_q2">Medium Four Bar</option>
+    <option value="drums_4bar_med_lokl_q2">Medium Four Bar with Low KL Divergence</option>
+    
+    <option disabled>-Melodys-</option>
+    <option value="mel_2bar_small">Small 2 Bar</option>
+    <option value="mel_4bar_med_q2">Medium 4 Bar</option>
+    <option value="mel_4bar_med_lokl_q2">Medium 4 Bar with Low KL Divergence</option>
+    <option value="mel_4bar_small_q2">Small 4 Bar</option>
+    <option value="mel_chords">Chords</option>
+    <option value="mel_16bar_small_q2">Small 26 Bar</option>
+    
+    <option disabled>-Trios-</option>
+    <option value="trio_4bar_lokl_small_q1">Small 4 Bar with Low KL Divergence</option>
+    
+    <option disabled>-Multitrack-</option>
+    <option value="multitrack">Multitrack</option>
+    <option value="multitrack_med">Medium Multitrack</option>
+    <option value="multitrack_med_fb256">Medium Multitrack (Lite)</option>
+    <option value="multitrack_chords">Multitrack with Chords</option>
+    <option value="multitrack_med_chords">Medium Multitrack with Chords</option>
+    <option value="multitrack_med_chords_fb256">Medium Multitrack with Chords (Lite)</option>
+    
+    <option disabled>-GrooVAE-</option>
+    <option value="groovae_2bar_humanize">Humanized Two Bar GrooVAE</option>
+    <option value="groovae_2bar_tap2drum">Two Bar "tap2drum" GrooVAE</option>
+    <option value="groovae_4bar">Four Bar GrooVAE</option>
+    
+    </select><br>
+    RNN Model: <select id='rnn'>
+    <option value="basic_rnn">Basic</option>
+    <option value="melody_rnn">Melody</option>
+    <option value="drum_kit_rnn">Drums</option>
+    </select><br>
+    <input type='button' value='Load Model' id='load'/><br>
     <input type='button' value='PLAY' id='play'/><br>
     <canvas id='canvas'></canvas>
     <script src='main.js'></script>
