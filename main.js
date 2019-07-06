@@ -47,5 +47,5 @@ function viz(x) {
   document.getElementById("play").addEventListener("click", function () {
     var steps = parseInt(document.getElementById("steps").value);
     var temp = parseInt(document.getElementById("temp").value);
-    play(steps, temp);
+    playVAE(steps, temp);
   });
